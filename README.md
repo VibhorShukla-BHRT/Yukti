@@ -31,7 +31,7 @@ This project demonstrates a minimal compiler pipeline for a C-like language that
 |---------------------|---------|
 | `tokeniser.py`      | Converts raw source code into a stream of tokens. |
 | `ast_builder.py`    | Builds the AST using a recursive descent parser. Defines AST node classes. |
-| `asm_gen.py`        | Generates pseudo-assembly code. Detects specific patterns and emits custom instruction `CUBEMULADD`. |
+| `asm_gen.py`        | Generates pseudo-assembly code. Detects specific patterns. |
 | `interpreter.py`    | Executes the AST directly using an interpreter. |
 | `compile_and_run.py`| Orchestrates tokenization, parsing, assembly generation, and interpretation. |
 | `Code.py`           | Sample input code and main runner for the pipeline. |
