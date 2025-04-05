@@ -17,11 +17,11 @@ This project demonstrates a minimal compiler pipeline for a C-like language that
 
 ## 🔧 Features
 
-- Lexical Analysis: Tokenizes source code using regular expressions.
-- Parsing: Builds an Abstract Syntax Tree (AST) using a recursive descent parser.
-- Custom Optimization: Detects `x*x*x + x*y` patterns and replaces them with `CUBEMULADD x, y`.
-- Assembly Code Generation: Outputs pseudo-assembly instructions to `./output.asm`.
-- Interpreter: Executes the code to simulate actual results.
+- **Lexical Analysis:** Tokenizes source code using regular expressions.
+- **Parsing:** Builds an Abstract Syntax Tree (AST) using a recursive descent parser.
+- **Custom Optimization:** Detects `x*x*x + x*y` patterns and replaces them with `CUBEMULADD x, y`.
+- **Assembly Code Generation:** Outputs pseudo-assembly instructions to `./output.asm`.
+- **Interpreter:** Executes the code to simulate actual results.
 
 ---
 
@@ -39,8 +39,8 @@ This project demonstrates a minimal compiler pipeline for a C-like language that
 ---
 
 ## 🧩 Dependencies:
- - OS: Linux, MacOS, Windows(8+)
- - Python : 3.10+
+ - **OS:** Linux, MacOS, Windows(8+)
+ - **Python :** 3.10+
 
 ---
 
