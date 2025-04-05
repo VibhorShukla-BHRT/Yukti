@@ -1,7 +1,7 @@
 ## 👤 Author
 
 **Vibhor Shukla**  
-📧 Email: vshukla107.btech2023@cse.nitrr.ac.in
+📧 Email: vshukla107.btech2023@cse.nitrr.ac.in <br>
 🎓 Roll No: 23115107  
 📚 Semester: 4th  
 🏫 College: NIT Raipur  
@@ -47,15 +47,15 @@ This project demonstrates a minimal compiler pipeline for a C-like language that
 ## 🚀 How to Run
 
 ### Step 1: Clone the Repository
-    ```bash
+```bash
     git clone https://github.com/VibhorShukla-BHRT/Yukti.git
     cd Yukti
-    ```
+```
 
 ### Step 2: Run the Compiler
-    ```bash
+```bash
     python Code.py
-    ```
+```
 
 This will:
 - Print token stream
@@ -67,21 +67,21 @@ This will:
 ## 💡 Example
 
 ### Sample Input (Code.py)
-    ```bash
+```c
     int x = 2;
     int y = 3;
     int z = x * x * x + x * y;
     print(z);
-    ```
+```
 ### Generated ./output.asm
-    ```bash
+```asm
     MOV x, 2
     MOV y, 3
     CUBEMULADD z, x, y
     PRINT z
-    ```
+```
 ### Console Output
-    ```bash
+```bash
     <---Tokenisation--->
 
     ('INT', 'int')
@@ -133,18 +133,20 @@ This will:
     <---Result(s)--->
 
     14
-    ```
+```
 
 ---
 ## Why create a simulation? Why not just implement it in real machine?
-Simply because it's not feasible. A CPU has predefined instructions like `ADD`, `IMUL` etc. To implement a custom instruction like `CUBEMULADD` would mean one would have to make a new CPU from scratch.So the options are:
-    1. Build a new CPU from scratch(not feasible)
-    2. One could trick the compiler to produce a custom assembly, but again it won't execute because it's not a valid system instruction(due to point 1)
+Simply because it's not feasible. A CPU has predefined instructions like `ADD`, `IMUL` etc. To implement a custom instruction like `CUBEMULADD` would mean one would have to make a new CPU from scratch.So the options are:<br>
+    1. Build a new CPU from scratch(not feasible)<br>
+    2. One could trick the compiler to produce a custom assembly, but again it won't execute because it's not a valid system instruction(due to point 1)<br>
     3. Create a virtual cpu and a virtual compiler-cum-interpreter(this project).
+## Why `objdump` would not work?
+Since this is a virtual maching you could directly see the assembly code when you run the `Code.py` file. It's save in `./ouput.asm` file in the current directory.
+You couldn't use `objdump` in it cuz this command simply doesn't exist in the virtual machine. You could directly view the .asm code as explained above.
 ## ⚙️ Why It Doesn’t Produce `.exe`
-
-This compiler is a simulation. It stops at the code generation phase and does **not produce actual executables (.exe)**, because:
-
+I chose not to simulate `.exe` creation because `.exe` implies a platform-specific binary, while my instruction set targets a virtual architecture not tied to actual hardware. Adding a fake `.exe` wouldn't improve functionality and could confuse the abstraction.
+This compiler is a **simulation**. It stops at the code generation phase and does **not produce actual executables (.exe)**, because:
 - The custom instruction `CUBEMULADD` doesn’t exist in real hardware.
 - No real machine code or binary backend is implemented.
 - The output is designed for a custom virtual architecture, not physical execution.
