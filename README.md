@@ -142,8 +142,8 @@ Simply because it's not feasible. A CPU has predefined instructions like `ADD`, 
     2. One could trick the compiler to produce a custom assembly, but again it won't execute because it's not a valid system instruction(due to point 1)<br>
     3. Create a virtual cpu and a virtual compiler-cum-interpreter(this project).
 ## Why `objdump` would not work?
-Since this is a virtual maching you could directly see the assembly code when you run the `Code.py` file. It's save in `./ouput.asm` file in the current directory.
-You couldn't use `objdump` in it cuz this command simply doesn't exist in the virtual machine. You could directly view the .asm code as explained above.
+Since this is a virtual maching you could directly see the assembly code when you run the `Code.py` file. It's saved in `./ouput.asm` file in the current directory.
+You couldn't use `objdump` in it because this command simply doesn't exist in the virtual machine. You could directly view the .asm code as explained above.
 ## ⚙️ Why It Doesn’t Produce `.exe`
 I chose not to simulate `.exe` creation because `.exe` implies a platform-specific binary, while my instruction set targets a virtual architecture not tied to actual hardware. Adding a fake `.exe` wouldn't improve functionality and could confuse the abstraction.
 This compiler is a **simulation**. It stops at the code generation phase and does **not produce actual executables (.exe)**, because:
@@ -151,7 +151,7 @@ This compiler is a **simulation**. It stops at the code generation phase and doe
 - No real machine code or binary backend is implemented.
 - The output is designed for a custom virtual architecture, not physical execution.
 
-The goal is to demonstrate compiler design principles, pattern recognition, and custom instruction integration — not low-level compilation.
+The goal is to demonstrate compiler design principles, pattern recognition, and custom instruction integration.
 
 ---
 
